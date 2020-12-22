@@ -1,0 +1,35 @@
+<!-- директива-ссылка на шаблон -->
+{% extends "base.html" %}
+
+<!-- основной контент -->
+{% block body %}
+
+<div class="main">
+	<div class="content">
+		<!-- тег формы ввода информации -->
+		<form action="" method="post">
+			<!-- поле ввода названия сайта -->
+			<p>
+				<label for="">Web-сайт</label>
+				<input type="text" name="site" id="">
+			</p>
+			<!-- поле ввода пароля -->
+			<p>
+				<label for="">Пароль:</label>
+				<input type="password" name="pwd" id="">
+			</p>
+			<!-- кнопка отправки -->
+			<p>
+				<input type="submit">
+			</p>
+
+			<!-- вывод результата -->
+			<div class="content__output">
+				<h3>{{ message }}</h3>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+{% endblock %}
